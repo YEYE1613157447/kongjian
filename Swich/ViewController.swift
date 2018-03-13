@@ -23,15 +23,20 @@ class ViewController: UIViewController {
 //        
 //        self.view.addSubview(swi)
 
-        let page = UIPageControl(frame: CGRect(x: 100, y: 100, width: 100, height: 20))
-        page.numberOfPages = 4
-        page.currentPageIndicatorTintColor = UIColor.red
-        page.pageIndicatorTintColor = UIColor.black
-        self.view.backgroundColor = UIColor.white
-        page.addTarget(self, action: #selector(changevalue(page:)), for: .valueChanged)
-        self.view.addSubview(page)
-        
-        
+//        let page = UIPageControl(frame: CGRect(x: 100, y: 100, width: 100, height: 20))
+//        page.numberOfPages = 4
+//        page.currentPageIndicatorTintColor = UIColor.red
+//        page.pageIndicatorTintColor = UIColor.black
+//        self.view.backgroundColor = UIColor.white
+//        page.addTarget(self, action: #selector(changevalue(page:)), for: .valueChanged)
+//        self.view.addSubview(page)
+        let seg = UISegmentedControl(items: ["1","2","3","4"])
+        seg.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        seg.insertSegment(withTitle: "sd", at: 2, animated: true)
+        seg.removeSegment(at: 0, animated: true)
+        seg.setTitle("6", forSegmentAt: 3)
+
+        self.view.addSubview(seg)
         
     }
     
